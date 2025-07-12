@@ -37,12 +37,16 @@ app.post("/update-rss", (req, res) => {
       <guid>https://www.genacampbell.shop/products/${product.handle}</guid>
     </item>
   `;
+const raw = product.body_html || "";
+const cleanDescription = raw.replace(/(<([^>]+)>)/gi, "");
 
   fs.readFile("rss.xml", "utf8", (err, data) => {
     const updated = data.replace("</channel></rss>", newItem + "\n</channel></rss>");
     fs.writeFile("rss.xml", updated, () => res.sendStatus(200));
   });
 });
+<enclosure url="https://cdn.shopify.com/s/files/.../products/image.jpg" type="image/jpeg" />
+const updatedXml = xmlContent.replace('</channel>', item + '\n</channel>');
 
 app.listen(3000);
 # Paris Style Bags – Boutique Gena Campbell
