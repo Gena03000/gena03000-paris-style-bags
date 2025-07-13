@@ -1,3 +1,4 @@
+https://genacampbell.github.io/rss/nouveautes.xml
 https://gena03000-webhook-rss.vercel.app/update-order
 export default async function handler(req, res) {
   if (req.method === "POST") {
